@@ -1,29 +1,61 @@
-#!/usr/bin/env python
-#
-# Copyright 2007 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
 import webapp2
+import urllib2
+import jinja2
+import os
 
-class MainHandler(webapp2.RequestHandler):
+class landingHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        landingPage = jinja_environment.get_template('landing.html')
+        self.response.write(landingPage.render())
+class HomeHandler(webapp2.RequestHandler):
+    def get(self):
+        homePage = jinja_environment.get_template('home.html')
+        self.response.write(homePage.render())
 
-class UnoHandler(webapp2.RequestHandler):
+class unoHomeHandler(webapp2.RequestHandler):
+    def get(self):
+        unoHome = jinja_environment.get_template('unohome.html')
+        self.response.write(unoHome.render())
 
+class unoInstructionsHandler(webapp2.RequestHandler):
+    def get(self):
+        unoInstructions = jinja_environment.get_template('unoinstructions.html')
+        self.response.write(unoInstructions.render())
 
+class unoGameHandler(webapp2.RequestHandler):
+    def get(self):
+        unoGame = jinja_environment.get_template('unogame.html')
+        self.response.write(unoGame.render())
+
+class locatorHandler(webapp2.RequestHandler):
+    def get(self):
+        locator = jinja_environment.get_template('locator.html')
+        self.response.write(locator.render())
+
+class dumpHandler(webapp2.RequestHandler):
+    def get(self):
+        dump = jinja_environment.get_template('dump.html')
+        self.response.write(dump.render())
+
+class dumpSentHandler(webapp2.RequestHandler):
+    def get(self):
+        dumpSent = jinja_environment.get_template('dumpsent.html')
+        self.response.write(dumpSent.render())
+
+class dumpPreviewHandler(webapp2.RequestHandler):
+    def get(self):
+        dumpPreview = jinja_environment.get_template('dumppreview.html')
+        self.response.write(dumpPrevieHandler())
+
+jinja_environment = jinja2.Environment(loader=
+jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', landingHandler),
+    ('/home', HomeHandler),
+    ('/unohome', unoHomeHandler),
+    ('/locations', locatorHandler),
+    ('/breakup', dumpHandler),
+    ('/breakupsent', dumpSentHandler),
+    ('/breakuppreview', dumpPreviewHandler)
 ], debug=True)
