@@ -45,7 +45,7 @@ class dumpSentHandler(webapp2.RequestHandler):
 class dumpPreviewHandler(webapp2.RequestHandler):
     def get(self):
         dumpPreview = jinja_environment.get_template('dumppreview.html')
-        self.response.write(dumpPrevieHandler())
+        self.response.write(dumpPreviewHandler())
 
 jinja_environment = jinja2.Environment(loader=
 jinja2.FileSystemLoader(os.path.dirname(__file__)))
