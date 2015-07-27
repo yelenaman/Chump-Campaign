@@ -5,8 +5,8 @@ import os
 
 class landingHandler(webapp2.RequestHandler):
     def get(self):
-        landingPage = jinja_environment.get_template('/templates/landing.html')
-        self.response.write(landingPage.render())
+        landing = jinja_environment.get_template('templates/landing.html')
+        self.response.write(landing.render())
 class homeHandler(webapp2.RequestHandler):
     def get(self):
         homePage = jinja_environment.get_template('home.html')
