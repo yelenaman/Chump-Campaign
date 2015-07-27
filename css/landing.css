@@ -1,9 +1,10 @@
 body {
-  background-color: #F5647F;
+  background-color: #E60000;
 }
 
 h1{
   color: white;
-  font-family:"Lucida Console", Monaco, monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 150px;
   text-align: center;
 }
