@@ -12,7 +12,8 @@ handlers:
 - url: /templates
   static_dir: templates
 
-
+- url: /pictures
+  static_dir: pictures
 
 - url: /favicon\.ico
   static_files: favicon.ico
