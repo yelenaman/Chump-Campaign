@@ -5,9 +5,9 @@ import os
 
 class landingHandler(webapp2.RequestHandler):
     def get(self):
-        landingPage = jinja_environment.get_template('landing.html')
+        landingPage = jinja_environment.get_template('/templates/landing.html')
         self.response.write(landingPage.render())
-class HomeHandler(webapp2.RequestHandler):
+class homeHandler(webapp2.RequestHandler):
     def get(self):
         homePage = jinja_environment.get_template('home.html')
         self.response.write(homePage.render())
@@ -45,14 +45,14 @@ class dumpSentHandler(webapp2.RequestHandler):
 class dumpPreviewHandler(webapp2.RequestHandler):
     def get(self):
         dumpPreview = jinja_environment.get_template('dumppreview.html')
-        self.response.write(dumpPreviewHandler())
+        self.response.write(dumpPreviewHandler.render())
 
 jinja_environment = jinja2.Environment(loader=
 jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
     ('/', landingHandler),
-    ('/home', HomeHandler),
+    ('/home', homeHandler),
     ('/unohome', unoHomeHandler),
     ('/locations', locatorHandler),
     ('/breakup', dumpHandler),
