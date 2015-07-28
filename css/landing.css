@@ -40,7 +40,7 @@ h2 {
   border: 5px solid white;
   margin: auto;
   font-size: 23pt;
-  padding: 10px
+  padding: 10px;
 }
 
 @media screen and (min-width: 600px) {
