@@ -75,3 +75,15 @@ h2 {
   border-width: 10px;
   margin: auto;
 }
+
+#joinButton{
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #C44747;
+  color: black;
+  text-align: center;
+  border: 1px solid black;
+  margin: auto;
+  font-size: 30pt;
+  padding: 10px
+}
