@@ -29,6 +29,10 @@ h2 {
   margin: 10px auto;
 }
 
+#trademark{
+  text-align: center;
+}
+
 .nav ul {
   list-style: none;
   background-color: #444;
