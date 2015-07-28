@@ -5,6 +5,14 @@ body{
   margin-right: auto;
 }
 
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 330px;
+}
+
 #gameButton {
   text-align: center;
   height: 40px;
@@ -13,6 +21,7 @@ body{
   padding: 10px;
   font-family: 'Megrim', cursive;
   font-size: 23pt;
+  margin-top: 200px;
 }
 
 #playuno {

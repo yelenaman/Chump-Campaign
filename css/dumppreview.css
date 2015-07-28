@@ -5,6 +5,13 @@ body{
  margin-right: auto;
 }
 
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
 #sendButton {
   text-align: center;
   padding: 100px;
@@ -13,7 +20,6 @@ body{
 #send {
   font-size: 50px;
 }
-
 
 .nav ul {
   list-style: none;
