@@ -4,6 +4,7 @@ body{
  margin-left: auto;
  margin-right: auto;
 }
+
 .nav ul {
   list-style: none;
   background-color: #444;
@@ -49,5 +50,4 @@ body{
     display: inline-block;
     margin-right: -4px;
 }
->>>>>>> 603be78833b1101929d4715faacedc9c22289b23
 }

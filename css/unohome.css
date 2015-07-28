@@ -9,21 +9,36 @@ body{
   text-align: center;
   height: 40px;
   margin: 40px;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  font-size: 23pt;
 }
 
 #playuno {
-  font-size: 50px;
-
+  font-size: 23pt;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  text-align: center;
 }
 
 #instructionsButton {
   text-align: center;
-  padding: 100px;
+  padding: 10px;
+  color: black;
+  font-family: 'Megrim', cursive;
+  font-size: 23pt;
 }
 
 #instructions {
-  font-size: 50px;
+  font-size: 23pt;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  text-align: center;
 }
+
 .nav ul {
   list-style: none;
   background-color: #444;
