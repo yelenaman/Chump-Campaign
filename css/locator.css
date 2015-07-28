@@ -1,5 +1,6 @@
 body {
   background-color: #E60000;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -13,7 +14,6 @@ h3 {
 }
 
 #googleMap {
-  margin-top: 50px;
 }
 
 #trademark {
