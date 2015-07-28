@@ -21,6 +21,17 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  color:white;
+  font-family: 'Megrim', cursive;
+  font-size: 34px;
+  text-align:center;
+}
+
+
+
+
+
 .nav ul {
   list-style: none;
   background-color: #444;
