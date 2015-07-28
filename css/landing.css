@@ -54,7 +54,7 @@ h2 {
 
 #chip {
   width: 50%;
-  height: 350px;
+  height: 70%;
   margin: 50px;
   padding: 10px;
   border-width: 10px;
@@ -69,6 +69,11 @@ h2 {
 
   #chip {
     width: 1000px;
+    height: 350px;
+    margin: 50px;
+    padding: 10px;
+    border-width: 10px;
+    margin: auto;
   }
   .nav li {
     font-size: 2em;
