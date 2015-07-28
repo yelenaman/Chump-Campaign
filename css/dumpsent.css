@@ -5,6 +5,11 @@ body {
   margin-right: auto;
 }
 
+h4{
+  color: white;
+  font-family: 'Megrim';
+}
+
 .nav ul {
   list-style: none;
   background-color: #444;
