@@ -11,6 +11,7 @@ handlers:
 
 - url: /templates
   static_dir: templates
+  application_readable: True
 
 - url: /pictures
   static_dir: pictures
