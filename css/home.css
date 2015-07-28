@@ -2,6 +2,18 @@ body {
   background-color: #E60000;
 }
 
+#fatchip {
+  width: 345px;
+  height: 350px;
+  margin: 5px;
+  padding: 10px;
+  border:1px solid white;
+  background-color: #E60000;
+  border-width: 4px;
+  margin:auto;
+  margin-top: 40px;
+}
+
 h1 {
   color: white ;
   font-family: 'Megrim', cursive;
@@ -10,8 +22,8 @@ h1 {
   border: 10px solid white ;
   width: 40%;
   margin: auto;
-  padding: 70px ;
-
+  padding: 50px;
+  margin-top: 40px;
 }
 
 h2 {
@@ -57,6 +69,10 @@ h2 {
 }
 
 @media screen and (min-width: 600px) {
+  h1{
+    width: 500px;
+    font-size: 100px;
+  }
   .nav li {
     width: 120px;
     border-bottom: none;
@@ -68,4 +84,5 @@ h2 {
 .nav li {
     display: inline-block;
     margin-right: -4px;
+}
 }
