@@ -5,8 +5,16 @@ body{
   margin-right: auto;
 }
 
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
 #player {
   margin-top: 60px;
+  margin-bottom: 250px;
 }
 .nav ul {
   list-style: none;

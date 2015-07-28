@@ -4,25 +4,24 @@ body {
   margin-right: auto;
 }
 
-h1 {
-  color: white ;
-  font-family: 'Megrim', cursive;
-  font-size: 100px ;
-  text-align: center;
-}
-
-h2 {
-  color: white;
-  font-family: 'Megrim', cursive;
-  font-size: 50px;
-  text-align: center;
-}
-
 h3 {
   color: white;
   font-family: 'Megrim', cursive;
   font-size: 70px;
   text-align: center;
+  margin-top: 40px;
+}
+
+#googleMap {
+  margin-top: 50px;
+}
+
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: -500px;
 }
 
 #header{

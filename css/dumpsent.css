@@ -5,6 +5,13 @@ body {
   margin-right: auto;
 }
 
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
 h4{
   color: white;
   font-family: 'Megrim';

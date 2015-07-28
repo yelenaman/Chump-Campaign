@@ -5,6 +5,13 @@ body {
   margin-right: auto;
 }
 
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
 h1 {
   color: white;
   font-family: 'Megrim', cursive;
@@ -13,7 +20,7 @@ h1 {
   border: 10px solid white;
   width: 50%;
   margin: auto;
-  padding: 70px;
+  padding: 45px;
 }
 
 h2 {
