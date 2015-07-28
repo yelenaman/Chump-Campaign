@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
   background-color: #E60000;
 }
@@ -47,4 +48,9 @@ body{
     display: inline-block;
     margin-right: -4px;
 }
+body {
+  background-color: #E60000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }

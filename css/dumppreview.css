@@ -1,5 +1,8 @@
 body{
-  background-color: #E60000;
+ background-color: #E60000;
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
 }
 .nav ul {
   list-style: none;
@@ -46,4 +49,5 @@ body{
     display: inline-block;
     margin-right: -4px;
 }
+>>>>>>> 603be78833b1101929d4715faacedc9c22289b23
 }
