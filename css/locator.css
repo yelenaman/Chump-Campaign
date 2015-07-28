@@ -1,6 +1,5 @@
 body {
   background-color: #E60000;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -24,6 +23,18 @@ h3 {
   font-family: 'Megrim', cursive;
   font-size: 70px;
   text-align: center;
+}
+
+#header{
+  float: left;
+}
+
+#headerText{
+  margin-top: 5px;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  float: left;
 }
 
 .nav ul {
