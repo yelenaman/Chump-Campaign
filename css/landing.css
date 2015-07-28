@@ -4,6 +4,36 @@ body {
 
 h1{
   color: white;
+  font-family: 'Megrim', cursive;
+  font-size: 100px;
+  text-align: center;
+  border: 10px solid white;
+  width: 40%;
+  margin: auto;
+  padding: 70px;
+}
+
+h2 {
+  color: white;
+  font-family: 'Megrim', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+
+#chip {
+  width: 1000px;
+  height: 350px;
+  margin: 50px auto;
+  padding: 10px;
+  border-width: 10px;
+}
+
+/*body {
+  background-color: #E60000;
+}
+
+h1{
+  color: white;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 150px;
   text-align: center;
@@ -15,4 +45,4 @@ h1{
 
 #enterButton{
   text-align: center;
-}
+}*/

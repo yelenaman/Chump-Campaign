@@ -2,6 +2,52 @@ body {
   background-color: #E60000;
 }
 
+h1 {
+  color: white ;
+  font-family: 'Megrim', cursive;
+  font-size: 100px ;
+  text-align: center;
+  border: 10px solid white ;
+  width: 40%;
+  margin: auto;
+  padding: 70px ;
+
+}
+
+h2 {
+  color: white;
+  font-family: 'Megrim', cursive;
+  font-size: 50px;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body {
+  background-color: #E60000;
+}
+
 h1{
   color: white;
   font-family: 'Megrim', cursive;
@@ -25,4 +71,4 @@ h2 {
   margin: 20px auto;
   padding: 50px;
   border-width: 10px;
-}
+}*/
