@@ -2,7 +2,7 @@ body {
   background-color: #E60000;
 }
 
-.nav ul {
+/*.nav ul {
   list-style: none;
   background-color: #444;
   text-align: center;
@@ -27,7 +27,7 @@ body {
 
 .nav a:hover {
   background-color: #FF0000;
-}
+}*/
 
 /*.nav a.active {
   background-color: #fff;
@@ -53,8 +53,8 @@ h2 {
 }
 
 #chip {
-  width: 50%;
-  height: 70%;
+  width: 1000px;
+  height: 350px;
   margin: 50px;
   padding: 10px;
   border-width: 10px;
@@ -78,16 +78,7 @@ h2 {
     width: 500px;
     font-size: 100px;
   }
-
-  #chip {
-    width: 1000px;
-    height: 350px;
-    margin: 50px;
-    padding: 10px;
-    border-width: 10px;
-    margin: auto;
-  }
-  .nav li {
+  /*.nav li {
     font-size: 2em;
     width: 120px;
     border-bottom: none;
@@ -99,5 +90,5 @@ h2 {
 .nav li {
     display: inline-block;
     margin-right: -4px;
-}
+}*/
 }
