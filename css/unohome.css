@@ -1,5 +1,8 @@
 body{
   background-color: #E60000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #gameButton {
