@@ -5,6 +5,9 @@ body{
   margin-right: auto;
 }
 
+#player {
+  margin-top: 60px;
+}
 .nav ul {
   list-style: none;
   background-color: #444;
