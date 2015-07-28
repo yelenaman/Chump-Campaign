@@ -5,24 +5,10 @@
     <title> locator </title>
     <link rel="stylesheet" type="text/css" href="../css/locator.css">
     <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
-
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script>
-    function initialize() {
-      var mapProp = {
-        center:new google.maps.LatLng(51.508742,-0.120850),
-        zoom:5,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
     <link rel="icon" type="image/png" href="../pictures/Chipmunk.png"/>
-
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <link rel="icon" type="image/png" href="../pictures/Chipmunk.png"/>
   </head>
-
   <body>
 
     <div class="navigationbar">
@@ -30,17 +16,18 @@
         <div class="nav">
           <ul>
             <li class="one"><a href="../templates/home.html">Home</a></li>
-            <li class="two"><a href="../templates/unogame.html">ChumpUNO</a></li>
+            <li class="two"><a href="../templates/unohome.html">ChumpUNO</a></li>
             <li class="three"><a href="../templates/locator.html">Locator</a></li>
-            <li class="four"><a href="#">4</a></li>
-            <li class="five"><a href="#">5</a></li>
+            <li class="four"><a href="../templates/dump.html">BreakUp</a></li>
+            <li class="five"><a href="../templates/videoSearch.html">Videos</a></li>
           </ul>
         </div>
       </header>
     </div>
-
-  <h2> Chump Locator <h2>
+  <h3> Chump Locator <h3>
+  <iframe width="600" height="450" frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/search?q=Starbucks&key=AIzaSyCKoGHY-P4RWk78e2zO0qZ26OgznHo2iLQ"
+  allowfullscreen></iframe>
   <div id="googleMap" style="width:740px;height:500px;"></div>
-
   </body>
 </html>
