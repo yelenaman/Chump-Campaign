@@ -5,6 +5,7 @@
     <title> Break Up </title>
     <link rel="stylesheet" type="text/css" href="../css/dump.css">
     <link rel="icon" type="image/png" href="../pictures/Chipmunk.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -22,12 +23,16 @@
       </header>
     </div>
 <h1> Break yo girl's heart, with Chump's help </h1>
-  <form id="previewButton" action="/breakuppreview">
-  <input type="submit" value="Preview">
+  <form id="whatever" action="../templates/dumppreview.html">
+    <button id="preview" type="submit" action="../templates/dumppreview.html">
+      Preview
+    </button>
   </form>
 
-  <form id="sendButton" action="/breakupsent">
-  <input type="submit" value="Send">
+  <form id="sendButton" action="../templates/dumpsent.html">
+    <button id="send" type="submit" action="../templates/dumpsent.html">
+      Send
+    </button>
   </form>
 
   </body>
