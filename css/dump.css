@@ -12,8 +12,8 @@ h1 {
   text-align: center;
   width: 40%;
   margin: auto;
-  padding: 50px;
-  margin-top: 10px;
+  padding: 10px;
+  margin-top: 5px;
 }
 
 #trademark {
@@ -41,7 +41,7 @@ h1 {
   height: 40px;
   margin-right: 100px;
   color: black;
-  padding: 10px;
+  padding: 5px;
   font-family: 'Megrim', cursive;
   font-size: 15pt;
 }
@@ -51,7 +51,7 @@ h1 {
   height: 40px;
   margin-right: 100px;
   color: black;
-  padding: 10px;
+  padding: 5px;
   font-family: 'Megrim', cursive;
   font-size: 15pt;
 }
@@ -61,7 +61,7 @@ h1 {
   height: 40px;
   margin: 40px;
   color: black;
-  padding: 10px;
+  padding: 5px;
   font-family: 'Megrim', cursive;
   font-size: 23pt;
 }
@@ -69,14 +69,14 @@ h1 {
 #preview {
   font-size: 23px;
   color: black;
-  padding: 10px;
+  padding: 5px;
   font-family: 'Megrim', cursive;
   text-align: center;
 }
 
 #sendButton {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   color: black;
   font-family: 'Megrim', cursive;
   font-size: 23pt;
@@ -85,10 +85,10 @@ h1 {
 #send {
   font-size: 23px;
   color: black;
-  padding: 10px;
+  padding: 5px;
   font-family: 'Megrim', cursive;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 #inputQuestion{
