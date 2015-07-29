@@ -8,7 +8,7 @@ var colorToPlay = '';
 var valToPlay = '';
 var Players = [];
 
-//0 is index of the human player
+//prepares values and colors lists
 for (var i = 1; i < 10; i++)
 {
   values.push(i);
@@ -84,22 +84,11 @@ function checkValid(person){
   return valid;
 }
 
-//prints the cards that a player has
-function printHand(person){
-  var toReturn = 'Your cards are: \n';
-  for (x in person.cards){
-    toReturn += x + ') ' + cardToString(person.cards[x]) + '\n';
-  }
-  return toReturn;
-}
 
 //plays card, adds to pile, subtracts from hand
 function playCard(person, num){
-  //console.log('adding card to pile' + person + num);
-  var foo = person.cards.splice(num, 1)[0];
-  //console.log(cardToString(foo));
-  pile.push(foo);
-  //printPile(pile);
+  var toPlay = person.cards.splice(num, 1)[0];
+  pile.push(toPlay);
 }
 
 function getTopCard(){
@@ -138,6 +127,20 @@ function fillDeck(){
   shuffle(deck);
 }
 
+
+function add_card(card){
+  console.log('showing card');
+  $('#hand').append('<div id =' + cardToString(card) + 'class= "card'+ card.color + '" ><div class = "cardOval"><h3>' + card.value + '</h3></div></div>');
+  $('#cardBack').delay(200).fadeIn();
+}
+
+//prints the cards that a player has
+function showHand(person){
+  for (x in person.cards){
+    add_card(person.cards[x]);
+  }
+}
+
 //handles turn
 //if human, uses console
 function turnOfPlayer(num){
@@ -153,14 +156,8 @@ function turnOfPlayer(num){
   }
   //handles human turn
   if (player.human == true){
-    console.log(printHand(player));
-    console.log(valid);
-    var input = prompt('choose which card to play');
-    console.log(input);
-    input = parseInt(input);
-    console.log(typeof input);
+    showHand(player);
     playCard(player, input);
-    console.log(pile.length);
     console.log('you played ' + cardToString(pile[pile.length - 1]));
   }
   //handles computer turn
@@ -254,13 +251,18 @@ function playGame(players){
 }
 
 var player1 = new player('CHUMP THE CHIPMUNK', false);
-var player2 = new player('bob', false);
-var player3 = new player('joe', false);
-var player4 = new player('billy', false);
+var player2 = new player('Chumpina the first lady', false);
+var player3 = new player('little chumpy the baby', false);
 
-var player5 = new player('Max', true);
-var arr = [player1, player2, player3, player4, player5];
-playGame(arr);
+var card1 = new card('yellow', '+2');
+var card2 = new card('yellow', '+3');
+var card3 = new card('yellow', '+4');
+var card4 = new card('yellow', '+5');
+var card5 = new card('yellow', '+6');
+
+player1.cards = [card1, card2, card3];
+
+showHand(player1);
 
 
 
