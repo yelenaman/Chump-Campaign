@@ -1,3 +1,5 @@
+
+
 body {
   background-color: #E60000;
   text-align: center;
@@ -142,4 +144,34 @@ h1 {
 .nav li {
     display: inline-block;
     margin-right: 100px;
+}
+
+#hand{
+  width:100%;
+  height: 45px;
+  text-align:center;
+}
+
+.cardred {
+  width:20px;
+  height:40px;
+  background: 'red';
+}
+
+.cardyellow {
+  width:20px;
+  height:40px;
+  background-color: yellow;
+  margin: auto;
+  text-align: center;
+}
+
+.cardOval {
+  width: 20px;
+  height: 40px;
+  margin:10px 0 0 -10px;
+  background: white;
+  -moz-border-radius: 10px / 20px;
+  -webkit-border-radius: 10px / 20px;
+  border-radius: 10px / 20px;
 }
