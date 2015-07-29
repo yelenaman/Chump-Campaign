@@ -71,6 +71,14 @@ h1 {
   margin-bottom: 30px;
 }
 
+#inputQuestion{
+  color: white;
+}
+
+#inputMessage{
+  color: white;
+}
+
 .nav ul {
   list-style: none;
   background-color: #444;
