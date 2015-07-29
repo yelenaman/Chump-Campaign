@@ -66,6 +66,44 @@ h1 {
   background-color: #FF0000;
 }
 
+#hand{
+  width:100%;
+  height: 100px;
+  text-align:center;
+}
+
+.cardred {
+  width:40px;
+  height:80px;
+  background-color: red;
+}
+
+.cardyellow {
+  width:55px;
+  height:80px;
+  background-color: yellow;
+  text-align: center;
+  display:inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.cardOval {
+  margin-top: -20px;
+  width: 55px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cardText {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media screen and (min-width: 600px) {
   h1{
     width: 500px;
@@ -78,100 +116,9 @@ h1 {
     line-height: 50px;
     font-size: 1.4em;
   }
-
-.nav li {
+}
+/*.nav li {
     display: inline-block;
     margin-right: -4px;
 }
-}
-
-.nav ul {
-  list-style: none;
-  background-color: #444;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-.nav li {
-  font-family: 'Yantramanav', sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-  border-bottom: 1px solid #888;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  transition: .3s background-color;
-}
-
-.nav a:hover {
-  background-color: #FF0000;
-}
-
-
-.hand {
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
-  }
-
-.nav li {
-    display: inline-block;
-    margin-right: 100px;
-}
-
-#hand{
-  width:100%;
-  height: 45px;
-  text-align:center;
-}
-
-.cardred {
-  width:20px;
-  height:40px;
-  background: 'red';
-}
-
-.cardyellow {
-  width:20px;
-  height:40px;
-  background-color: yellow;
-  margin: auto;
-  text-align: center;
-}
-
-.cardOval {
-  width: 20px;
-  height: 40px;
-  margin:10px 0 0 -10px;
-  background: white;
-  -moz-border-radius: 10px / 20px;
-  -webkit-border-radius: 10px / 20px;
-  border-radius: 10px / 20px;
 }

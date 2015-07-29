@@ -29,7 +29,7 @@ function card(color, value){
 
 //turns card object into string form
 function cardToString(card){
-  var toReturn = card.color + ' ' + card.value;
+  var toReturn = card.color + '_' + card.value;
   return toReturn;
 }
 
@@ -130,8 +130,10 @@ function fillDeck(){
 
 function add_card(card){
   console.log('showing card');
-  $('#hand').append('<div id =' + cardToString(card) + 'class= "card'+ card.color + '" ><div class = "cardOval"><h3>' + card.value + '</h3></div></div>');
-  $('#cardBack').delay(200).fadeIn();
+  $('#hand').append('<div id =' + cardToString(card) +
+    ' class= "card'+ card.color + '" ><div class = "cardOval"><h3 class= "cardText">' +
+      card.value + '</h3></div></div>');
+  $('.card' + card.color).delay(200).fadeIn();
 }
 
 //prints the cards that a player has
@@ -260,9 +262,13 @@ var card3 = new card('yellow', '+4');
 var card4 = new card('yellow', '+5');
 var card5 = new card('yellow', '+6');
 
-player1.cards = [card1, card2, card3];
 
-showHand(player1);
+player1.cards = [card1, card2, card3];
+$( document ).ready(function() {
+  console.log('showing player1s hand')
+  showHand(player1)
+
+});
 
 
 
