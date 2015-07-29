@@ -12,6 +12,19 @@ body {
   text-align: center;
 }
 
+#header {
+  float :left;
+}
+
+#headerText {
+  margin-top: 5px;
+  font-size: 30px;
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  text-decoration: none;
+  float: left;
+}
+
 h4{
   color: white;
   font-family: 'Megrim';
@@ -26,7 +39,7 @@ h4{
 }
 
 .nav li {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Yantramanav', sans-serif;
   font-size: 1.2em;
   line-height: 40px;
   height: 40px;
@@ -60,5 +73,5 @@ h4{
 
 .nav li {
     display: inline-block;
-    margin-right: -4px;
+    margin-right: 50px;
 }
