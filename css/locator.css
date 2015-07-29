@@ -24,18 +24,11 @@ h3 {
   margin-top: -500px;
 }
 
-#header{
-  float: left;
+#header {
+  float :left;
 }
 
-#headerText{
-  margin-top: 5px;
-  font-size: 50px;
-  color: white;
-  text-decoration: none;
-  float: left;
-}
-
+headerText
 .nav ul {
   list-style: none;
   background-color: #444;
