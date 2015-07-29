@@ -10,6 +10,7 @@ body{
   font-family: 'Yantramanav', sans-serif;
   font-size: 20px;
   text-align: center;
+  margin-top: 250px;
 }
 
 #header {
@@ -39,6 +40,7 @@ body{
   padding: 10px;
   font-family: 'Megrim', cursive;
   text-align: center;
+  margin-top: 400px;
 
 }
 
