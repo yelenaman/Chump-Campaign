@@ -25,7 +25,26 @@ body{
   float: left;
 }
 
-h1{
+#gameButton {
+  text-align: center;
+  height: 40px;
+  margin: 40px;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  font-size: 23pt;
+  margin-top: 200px;
+}
+
+#playuno {
+  font-size: 23pt;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  text-align: center;
+}
+
+h1 {
   color: white;
   font-family: 'Megrim', cursive;
   font-size: 50px;
@@ -38,6 +57,7 @@ h1{
   text-align: center;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
 }
 
 .nav li {
@@ -46,6 +66,7 @@ h1{
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
+  display: inline-block;
 }
 
 .nav a {
@@ -70,5 +91,5 @@ h1{
 
 .nav li {
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 100px;
 }

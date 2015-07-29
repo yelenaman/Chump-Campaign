@@ -25,9 +25,48 @@ body {
   float: left;
 }
 
+#sendanother {
+  text-align: center;
+  height: 40px;
+  margin: 40px;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  font-size: 23pt;
+  margin-top: 100px;
+}
+
+#sendanother2 {
+  font-size: 23pt;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  text-align: center;
+}
+
+#returnhome {
+  text-align: center;
+  padding: 10px;
+  color: black;
+  font-family: 'Megrim', cursive;
+  font-size: 23pt;
+}
+
+#returnhome2 {
+  font-size: 23pt;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
 h4{
   color: white;
-  font-family: 'Megrim';
+  font-family: 'Megrim', cursive;
+  font-size: 100px ;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .nav ul {
@@ -36,6 +75,7 @@ h4{
   text-align: center;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
 }
 
 .nav li {
@@ -44,6 +84,7 @@ h4{
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
+  display: inline-block;
 }
 
 .nav a {
@@ -58,8 +99,8 @@ h4{
 }
 
 @media screen and (min-width: 600px) {
-  h1{
-    width: 500px;
+  h4 {
+    /*width: 500px;*/
     font-size: 100px;
   }
 
@@ -73,5 +114,6 @@ h4{
 
 .nav li {
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 100px;
+}
 }

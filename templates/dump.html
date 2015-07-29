@@ -2,14 +2,14 @@
 
 <html>
   <head>
-    <title> Break Up </title>
+    <title> Break Up Message </title>
     <link rel="stylesheet" type="text/css" href="../css/dump.css">
     <link rel="icon" type="image/png" href="../pictures/Chipmunk.png"/>
     <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yantramanav:400,300' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    
+
     <div id="header">
     <a href="../templates/home.html">
       <img src="../pictures/Chipmunk.png" height="50px" width="50px"> </a>
@@ -23,7 +23,6 @@
       <header>
         <div class="nav">
           <ul>
-            <li class="one"><a href="../templates/home.html">Home</a></li>
             <li class="two"><a href="../templates/unohome.html">ChumpUNO</a></li>
             <li class="three"><a href="../templates/locator.html">Locator</a></li>
             <li class="four"><a href="../templates/dump.html">BreakUp</a></li>
@@ -33,6 +32,16 @@
       </header>
     </div>
 <h1> Break yo girl's heart, with Chump's help </h1>
+  <form id="inputFields" action="../templates/uno.instructions" method="POST">
+  <div id="inputQuestion">
+  where she @ doe? <input type="text" name="emailInput"><br>
+  </div>
+  <br>
+  <div id="inputMessage">
+  how do you feel? <input type="text" name="msgInput"><br>
+  </div>
+  </form>
+
   <form id="whatever" action="../templates/dumppreview.html">
     <button id="preview" type="submit" action="../templates/dumppreview.html">
       Preview
