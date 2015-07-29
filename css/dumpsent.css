@@ -36,6 +36,7 @@ h4{
   text-align: center;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
 }
 
 .nav li {
@@ -44,6 +45,7 @@ h4{
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
+  display: inline-block;
 }
 
 .nav a {
@@ -74,4 +76,5 @@ h4{
 .nav li {
     display: inline-block;
     margin-right: 100px;
+}
 }

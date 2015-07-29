@@ -5,6 +5,7 @@ body{
   margin-right: auto;
 }
 
+
 #trademark {
   color: white;
   font-family: 'Yantramanav', sans-serif;
@@ -24,6 +25,7 @@ body{
   font-family: 'Yantramanav', sans-serif;
   text-decoration: none;
   float: left;
+  margin-right: 20px;
 }
 
 #gameButton {
@@ -61,12 +63,14 @@ body{
   text-align: center;
 }
 
+
 .nav ul {
   list-style: none;
   background-color: #444;
   text-align: center;
   padding: 0;
   margin: 0;
+  white-space: nowrap;
 }
 
 .nav li {
@@ -75,6 +79,7 @@ body{
   line-height: 40px;
   height: 40px;
   border-bottom: 1px solid #888;
+  display: inline-block;
 }
 
 .nav a {
@@ -95,9 +100,11 @@ body{
     height: 50px;
     line-height: 50px;
     font-size: 1.4em;
+
   }
 
-.nav li {
+  .nav li {
     display: inline-block;
     margin-right: 100px;
+}
 }
