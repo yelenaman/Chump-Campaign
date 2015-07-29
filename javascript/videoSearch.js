@@ -1,4 +1,4 @@
-function randomVideo{
-  randomNumero = ( Math.random() * 36 )
+function randomVideo(randomNumero){
+  randomNumero = ( Math.random() * 35 )
   return randomNumero
 }
