@@ -73,10 +73,35 @@ h1 {
 }
 
 .cardred {
-  width:40px;
+  width:55px;
   height:80px;
   background-color: red;
+  text-align: center;
+  display:inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
 }
+
+.cardblue {
+  width:55px;
+  height:80px;
+  background-color: blue;
+  text-align: center;
+  display:inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.cardpink {
+  width:55px;
+  height:80px;
+  background-color: pink;
+  text-align: center;
+  display:inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 
 .cardyellow {
   width:55px;
@@ -89,7 +114,7 @@ h1 {
 }
 
 .cardOval {
-  margin-top: -20px;
+  margin-top: -19px;
   width: 55px;
   height: 80px;
   background: white;
