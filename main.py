@@ -46,8 +46,9 @@ class dumpPreviewHandler(webapp2.RequestHandler):
     def post(self):
         msgInput = self.request.get('msgInput')
         emailInput= self.request.get('emailInput')
+        dict_words = {'msgInput': msgInput, 'emailInput': emailInput}
         dumpPreview = jinja_environment.get_template('templates/dumppreview.html')
-        self.response.write(dumpPreview.render())
+        self.response.write(dumpPreview.render(dict_words))
 
 class videoHandler(webapp2.RequestHandler):
     def get(self):
