@@ -36,6 +36,26 @@ h1 {
   float: left;
 }
 
+#inputQuestion {
+  text-align: center;
+  height: 40px;
+  margin-right: 100px;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  font-size: 15pt;
+}
+
+#inputMessage {
+  text-align: center;
+  height: 40px;
+  margin-right: 100px;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  font-size: 15pt;
+}
+
 #whatever {
   text-align: center;
   height: 40px;
