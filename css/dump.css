@@ -94,10 +94,12 @@ h1 {
 
 #inputQuestion{
   color: white;
+  font-family: 'Megrim', cursive;
 }
 
 #inputMessage{
   color: white;
+  font-family: 'Megrim', cursive;
 }
 
 .nav ul {
