@@ -68,6 +68,16 @@ class aboutHandler(webapp2.RequestHandler):
         aboutPage = jinja_environment.get_template('templates/about.html')
         self.response.write(aboutPage.render())
 
+class loseHandler(webapp2.RequestHandler):
+    def get(self):
+        losePage = jinja_environment.get_template('templates/unolose.html')
+        self.response.write(losePage.render())
+
+class winHandler(webapp2.RequestHandler):
+    def get(self):
+        winPage = jinja_environment.get_template('templates/unowin.html')
+        self.response.write(winPage.render())
+
 jinja_environment = jinja2.Environment(loader=
 jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
@@ -82,5 +92,7 @@ app = webapp2.WSGIApplication([
     ('/breakupsent', dumpSentHandler),
     ('/breakuppreview', dumpPreviewHandler),
     ('/videos', videoHandler),
-    ('/about', aboutHandler)
+    ('/about', aboutHandler),
+    ('/lose', loseHandler),
+    ('/win', winHandler)
 ], debug=True)
