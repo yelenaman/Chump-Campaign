@@ -43,7 +43,7 @@ class dumpSentHandler(webapp2.RequestHandler):
         self.response.write(dumpSent.render())
 
 class dumpPreviewHandler(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         msgInput = self.request.get('msgInput')
         emailInput= self.request.get('emailInput')
         dict_words = {'msgInput': msgInput, 'emailInput': emailInput}
