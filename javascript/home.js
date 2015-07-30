@@ -1,7 +1,3 @@
-// $(document).ready(function() {
-//   $('body').mouseenter(function() {
-//   $('#initiative').css({'opacity': '1'});
-//   })
-//
-//
-// });
+$(document).ready(function() {
+  $('.h1').fadeIn();
+});
