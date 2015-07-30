@@ -47,7 +47,13 @@ class dumpPreviewHandler(webapp2.RequestHandler):
     def get(self):
         msgInput = self.request.get('msgInput')
         emailInput= self.request.get('emailInput')
-        dict_words = {'msgInput': msgInput, 'emailInput': emailInput}
+        urllist = [
+            "../pictures/breakuppic2.jpg",
+            "../pictures/breakuppic3.jpg",
+            "../pictures/breakuppic4.jpg",
+            "../pictures/breakuppic5.jpg",
+            "../pictures/breakuppic6.jpg"]
+        dict_words = {'msgInput': msgInput, 'emailInput': emailInput, "imageurl": random.choice(urllist)}
         dumpPreview = jinja_environment.get_template('templates/dumppreview.html')
         self.response.write(dumpPreview.render(dict_words))
 
