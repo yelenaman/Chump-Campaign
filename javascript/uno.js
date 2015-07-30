@@ -96,6 +96,11 @@ function checkValid(person){
 function playCard(person, num){
   var toPlay = person.cards.splice(num, 1)[0];
   pile.push(toPlay);
+  setTimeout(function(){
+    if (person.human){
+      showHand(person);
+    }
+  }, 500); 
   console.log('played' + cardToString(toPlay));
   numTurns++;
   //added
@@ -243,7 +248,7 @@ function turnOfPlayer(num){
             for (j in valid){
               if (cardToString(player.cards[valid[j]]) == this.id){
                 console.log(valid[j]);
-                $( this ).hide(1000);
+                $(this).hide(1000);
                 playCard(player, valid[j]);
               }
             }
@@ -256,8 +261,10 @@ function turnOfPlayer(num){
   //handles computer turn
   else{
     //plays randomly chosen card out of valid list
+
     cardnum = parseInt(valid[Math.floor((Math.random() * valid.length))]);
-    playCard(player, cardnum);
+    setTimeout(function(){
+        playCard(player, cardnum);}, 500);
     console.log(player.name + ' played ' + cardToString(pile[pile.length - 1]));
   }
   //if player is out of cards, game is over
