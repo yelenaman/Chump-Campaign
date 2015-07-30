@@ -65,13 +65,24 @@ h1 {
 }
 
 #hand{
+  padding-top: 20px;
   width:100%;
   height: 100px;
   text-align:center;
 }
 
+/*button{
+
+}*/
+
+#topCard{
+  height:100px;
+  padding-bottom: 40px;
+  text-align:center;
+}
+
 .cardred {
-  width:55px;
+  width:56px;
   height:80px;
   background-color: red;
   text-align: center;
@@ -81,7 +92,7 @@ h1 {
 }
 
 .cardblue {
-  width:55px;
+  width:56px;
   height:80px;
   background-color: blue;
   text-align: center;
@@ -91,7 +102,7 @@ h1 {
 }
 
 .cardpink {
-  width:55px;
+  width:56px;
   height:80px;
   background-color: pink;
   text-align: center;
@@ -102,7 +113,7 @@ h1 {
 
 
 .cardyellow {
-  width:55px;
+  width:56px;
   height:80px;
   background-color: yellow;
   text-align: center;
@@ -111,9 +122,19 @@ h1 {
   vertical-align: middle;
 }
 
+.cardwild {
+  width:56px;
+  height:80px;
+  background-color: black;
+  text-align: center;
+  display:inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 .cardOval {
   margin-top: -19px;
-  width: 55px;
+  width: 56px;
   height: 80px;
   background :white;
   border-radius: 50%;
