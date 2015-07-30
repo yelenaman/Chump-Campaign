@@ -10,6 +10,7 @@ var Players = [];
 var wild = new card('wild', 'wild');
 var superwild = new card('wild', 'wild draw 4');
 var calledUno = false;
+var clockwise = true;
 
 //prepares values and colors lists
 for (var i = 1; i < 10; i++)
@@ -102,7 +103,12 @@ function playCard(person, num){
     }
   }, 500);
   console.log('played' + cardToString(toPlay));
-  numTurns++;
+  if (clockwise){
+    numTurns++;
+  }
+  else{
+    numTurns--;
+  }
   //added
   var num1 = handleCardAction(num);
   if (pile.length > 10){
@@ -272,11 +278,17 @@ function handleCardAction(num){
   valToPlay = topCardInPile.value;
   //handles skip
   if (topCardInPile.value == 'skip'){
-    numTurns++;
+    if (clockwise){
+      numTurns++;
+    }
+    else{
+      numTurns--;
+    }
   }
   //handles reverse
   if (topCardInPile.value == 'reverse'){
-    Players.reverse();
+    clockwise = !clockwise;
+    numTurns--;
   }
   //handles wild cards
   nextPlayer = Players[numTurns % Players.length];

@@ -5,20 +5,31 @@ body{
   margin-right: auto;
 }
 
-p{
+h1 {
   color: white;
+  font-family: 'Megrim', cursive;
+  font-size: 80px;
+  text-align: center;
+}
+
+#instructions {
+  color: white ;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 25px ;
+  border: 10px solid white;
+  margin: auto;
+  padding-bottom: 30px;
+  width: 150vh;
 }
 
 h3{
   color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
-#trademark {
-  color: white;
-  font-family: 'Yantramanav', sans-serif;
-  font-size: 20px;
-  text-align: center;
-}
 
 #header {
   float :left;
@@ -39,26 +50,19 @@ h3{
   height: 40px;
   margin: 40px;
   color: black;
-  padding: 10px;
+  padding: 40px;
   font-family: 'Megrim', cursive;
   font-size: 23pt;
-  margin-top: 200px;
+  margin-top:0px;
 }
 
 #playuno {
   font-size: 23pt;
   color: black;
-  padding: 10px;
   font-family: 'Megrim', cursive;
   text-align: center;
 }
 
-h1 {
-  color: white;
-  font-family: 'Megrim', cursive;
-  font-size: 50px;
-  text-align: center;
-}
 
 .nav ul {
   list-style: none;
@@ -87,6 +91,14 @@ h1 {
 
 .nav a:hover {
   background-color: #FF0000;
+}
+
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 15px;
+  text-align: center;
+
 }
 
 @media screen and (min-width: 600px) {
