@@ -1,5 +1,5 @@
 body {
-  background-color: #E60000;
+  background-color: #CC0000;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -37,6 +37,7 @@ h3 {
   font-family: 'Yantramanav', sans-serif;
   text-decoration: none;
   float: left;
+  padding-left: 1px;
 }
 
 
@@ -85,7 +86,7 @@ h3 {
 
 .nav li {
     display: inline-block;
-    margin-right: 100px
+    margin-right: 80px
 
 }
 }
