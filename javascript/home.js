@@ -1,3 +1,3 @@
-$(document).ready(function() {
-  $('.h1').fadeIn();
+$(document).ready(function(){
+  $('#aboutRonald').delay(500).fadeIn(500);
 });

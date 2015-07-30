@@ -2,6 +2,18 @@ body{
   background-color: #E60000;
 }
 
+#header {
+  float :left;
+}
+
+#headerText {
+  margin-top: 5px;
+  font-size: 30px;
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  text-decoration: none;
+  float: left;
+}
 
 .nav ul {
   list-style: none;
