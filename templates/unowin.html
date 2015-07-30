@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> :) </title>
+    <link rel="stylesheet" type="text/css" href="../css/unowin.css">
+    <link rel="icon" type="image/png" href="../pictures/Chipmunk.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yantramanav:400,300' rel='stylesheet' type='text/css'>
+  </head>
+   <body>
+
+{% include 'templates/navbar.html' %}
+
+  <h1> You won! </h1>
+
+  <form id="gameButton" action="/unogame">
+    <button id="playuno" type="submit" action="../templates/unogame.html">
+      Play Again
+    </button>
+  </form>
+
+  <form id="instructionsButton" action="/home">
+    <button id="instructions" type="submit" action="../templates/home.html">
+      Return Home
+    </button>
+  </form>
+
+
+
+
+
+  <footer id="trademark">
+
+    This site was approved and paid for by Ronald Q. Chump <br>
+    Developed by Chumps&trade;
+
+  </footer>
+
+  </body>
+</html>
