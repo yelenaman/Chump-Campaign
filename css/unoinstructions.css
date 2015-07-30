@@ -5,6 +5,14 @@ body{
   margin-right: auto;
 }
 
+p{
+  color: white;
+}
+
+h3{
+  color: white;
+}
+
 #trademark {
   color: white;
   font-family: 'Yantramanav', sans-serif;
