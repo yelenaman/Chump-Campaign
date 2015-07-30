@@ -115,6 +115,7 @@ function playCard(person, num){
       callUno(person.name);
     }
   }
+  calledUno = false;
   if (person.cards.length == 0){
     gameOver = true;
     alert(person.name + ' is the winner!');
@@ -261,8 +262,8 @@ function turnOfPlayer(num){
   }
   //if player is out of cards, game is over
   if (player.cards.length == 0){
-    gameOver = true;
-    alert(player.name + ' is the winner!');
+    //gameOver = true;
+    //alert(player.name + ' is the winner!');
     return;
   }
 }
@@ -334,12 +335,12 @@ function callUno(type){
 }
 
 var player1 = new player('CHUMP THE CHIPMUNK', false);
-var player2 = new player('Chumpina the first lady', false);
+var player2 = new player('Chumpina (wife #49)', false);
 var player3 = new player('little chumpy the baby', false);
 
 var playerx = new player('yelena', true);
 
-players = [player1, playerx];
+players = [player1, player2, player3, playerx];
 
 $( document ).ready(function() {
   playGame(players);
