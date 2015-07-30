@@ -37,7 +37,7 @@ body {
   background-color: #E60000;
   border-width: 4px;
   margin:auto;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -49,20 +49,19 @@ h1 {
   border: 10px solid white ;
   width: 30%;
   margin: auto;
-  padding: 40px;
+  padding: 10px;
   margin-top: 20px;
 }
 
 h2 {
   color: white ;
   font-family: 'Megrim', cursive;
-  font-size: 20px ;
+  /*font-size:100px ;*/
   text-align: center;
-  border: 10px solid white ;
-  text-align: center;
+  border: 10px solid white;
   width: 50%;
   margin: auto;
-  padding: 40px;
+  padding: 400px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 10px;
