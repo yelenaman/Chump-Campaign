@@ -12,32 +12,11 @@
 
   <body>
 
-    <div id="header">
-    <a href="../templates/home.html">
-      <img src="../pictures/Chipmunk.png" height="50px" width="50px"> </a>
-    </div>
+{% include 'templates/navbar.html' %}
 
-    <a href="../templates/home.html">
-      <div id="headerText"> CHUMP 2016 </div>
-    </a>
-
-    <div class="navigationbar">
-      <header>
-        <div class="nav">
-          <ul>
-            <li class="two"><a href="../templates/unohome.html">ChumpUNO</a></li>
-            <li class="three"><a href="../templates/locator.html">Locator</a></li>
-            <li class="four"><a href="../templates/dump.html">BreakUp</a></li>
-            <li class="five"><a href="../templates/videoSearch.html">Videos</a></li>
-          </ul>
-        </div>
-      </header>
-    </div>
-    <h1>
     <p> To: {{emailInput}} </p>
     <p> A message from your bae:
         {{msgInput}} </p>
-      </h1>
 
     <img src="../pictures/breakuppic2.jpg">
     <img src="../pictures/breakuppic3.jpg">
@@ -45,7 +24,7 @@
     <img src="../pictures/breakuppic5.jpg">
     <img src="../pictures/breakuppic6.jpg">
 
-    <form id="sendButton" action="../templates/dumpsent.html">
+    <form id="sendButton" action="/breakupsent">
       <button id="send" type="submit" action="../templates/dumpsent.html">
         Send
       </button>
