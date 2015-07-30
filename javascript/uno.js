@@ -199,8 +199,8 @@ function add_to_pile(card){
 //if human, uses console
 function turnOfPlayer(num){
   document.getElementById('play1').innerHTML= player1.cards.length;
-  document.getElementById('play2').innerHTML= player2.cards.length;
-  document.getElementById('play3').innerHTML= player3.cards.length;
+  document.getElementById('play3').innerHTML= player2.cards.length;
+  document.getElementById('play2').innerHTML= player3.cards.length;
   //updates total number of turns
   var player = Players[num];
   topCardInPile = getTopCard();
