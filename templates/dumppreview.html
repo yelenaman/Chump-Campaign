@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="../pictures/Chipmunk.png"/>
     <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yantramanav:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amita:400,700' rel='stylesheet' type='text/css'>
     <script src="dumppreview.js"> </script>
   </head>
 
@@ -14,15 +15,22 @@
 
 {% include 'templates/navbar.html' %}
 
-    <p> To: {{emailInput}} </p>
-    <p> A message from your bae:
-        {{msgInput}} </p>
 
-    <img src="../pictures/breakuppic2.jpg">
-    <img src="../pictures/breakuppic3.jpg">
-    <img src="../pictures/breakuppic4.jpg">
-    <img src="../pictures/breakuppic5.jpg">
-    <img src="../pictures/breakuppic6.jpg">
+
+  <div id="breakuppics" style="background-image:url({{ imageurl }})">
+    <div id="text">
+      <p> To: {{emailInput}} </p>
+
+
+
+
+
+      <p> A message from your bae:
+        {{msgInput}} </p>
+    </div>
+  </div>
+
+
 
     <form id="sendButton" action="/breakupsent">
       <button id="send" type="submit" action="/breakupsent">

@@ -1,9 +1,30 @@
 body{
- background-color: #E60000;
+ background-color: #CC0000;
  text-align: center;
  margin-left: auto;
  margin-right: auto;
 }
+
+#breakuppics {
+  background-size: cover;
+  height: 600px;
+  width: 800px;
+  align-items: center;
+  margin: auto;
+}
+
+#text {
+  color: white;
+  font-family: 'Amita', cursive;
+  text-align: center;
+  font-size: 60px;
+
+  font-weight:900;
+  margin-top: 1px;
+  line-height:300px;
+  height:3000px;
+}
+
 
 #trademark {
   color: white;
@@ -24,6 +45,7 @@ body{
   font-family: 'Yantramanav', sans-serif;
   text-decoration: none;
   float: left;
+  padding-left: 1px;
 }
 
 #sendButton {
@@ -40,7 +62,7 @@ body{
   padding: 10px;
   font-family: 'Megrim', cursive;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 50px;
 
 }
 

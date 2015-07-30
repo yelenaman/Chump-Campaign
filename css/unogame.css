@@ -1,5 +1,5 @@
 body {
-  background-color: #E60000;
+  background-color: #CC0000;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -7,14 +7,19 @@ body {
 
 #LilChumpy{
   color: white;
+  margin-right: 650px;
+  position: relative;
 }
 
 #Chumpina{
   color: white;
+  margin-left: 650px;
+  position: relative;
 }
 
 #RonaldQChump{
   color: white;
+  text-align: center;
 }
 
 #trademark {
@@ -35,6 +40,7 @@ body {
   font-family: 'Yantramanav', sans-serif;
   text-decoration: none;
   float: left;
+  padding-left: 1px;
 }
 
 h1 {
@@ -118,7 +124,7 @@ h1 {
 .cardpink {
   width:56px;
   height:80px;
-  background-color: pink;
+  background-color: #E62E8A;
   border: 3px solid white;
   text-align: center;
   display:inline-block;
