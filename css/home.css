@@ -57,9 +57,6 @@ h1 {
   opacity: inherit;
 
 }
-/*#h2container div {
-
-}*/
 
 #h2container {
   color: white ;
@@ -124,8 +121,14 @@ h1 {
     font-size: 1.4em;
   }
 
-  .nav li {
+
+ .nav li {
     display: inline-block;
+<<<<<<< HEAD
     margin-right: 60px;
 }
+=======
+    margin-right: 100px;
+  }
+>>>>>>> db830c77ad926ef6a1a19fe53709c8661b9a239b
 }

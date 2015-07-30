@@ -7,6 +7,9 @@ var numTurns = 0;
 var colorToPlay = '';
 var valToPlay = '';
 var Players = [];
+var wild = new card('wild', 'wild');
+var superwild = new card('wild', 'wild draw 4');
+var calledUno = false;
 
 //prepares values and colors lists
 for (var i = 1; i < 10; i++)
@@ -30,6 +33,12 @@ function card(color, value){
 //turns card object into string form
 function cardToString(card){
   var toReturn = card.color + '_' + card.value;
+  if (card == superwild){
+    return 'superwild';
+  }
+  else if (card.value == 'draw 2') {
+    toReturn = card.color + '_draw2';
+  }
   return toReturn;
 }
 
@@ -49,8 +58,6 @@ function create_deck(){
       deck.push(newcard);
     }
   }
-  var wild = new card('wild', '');
-  var superwild = new card('wild', 'draw 4');
   for (var i = 0; i <4; i++){
     deck.push(wild);
     deck.push(superwild);
@@ -67,7 +74,6 @@ function shuffle(o){
 function player(name, human){
   this.name = name;
   this.human = human;
-  this.goesFirst = false;
   this.cards = [];
 }
 
@@ -81,6 +87,7 @@ function checkValid(person){
           valid.push(x);
       }
   }
+  //valid.reverse();
   return valid;
 }
 
@@ -89,6 +96,33 @@ function checkValid(person){
 function playCard(person, num){
   var toPlay = person.cards.splice(num, 1)[0];
   pile.push(toPlay);
+  console.log('played' + cardToString(toPlay));
+  numTurns++;
+  //added
+  var num1 = handleCardAction(num);
+  if (pile.length > 10){
+    fillDeck();
+  }
+  if (person.cards.length == 1){
+    if (person.human){
+      if (calledUno == false){
+        alert('You forgot to call uno! Penalty: 2 cards')
+        person.cards.push(deck.pop());
+        person.cards.push(deck.pop());
+      }
+    }
+    else{
+      callUno(person.name);
+    }
+  }
+  calledUno = false;
+  if (person.cards.length == 0){
+    gameOver = true;
+    alert(person.name + ' is the winner!');
+    return;
+  }
+  turnOfPlayer(num1);
+  //endAdded
 }
 
 function getTopCard(){
@@ -108,6 +142,9 @@ function prepareGame(){
     //console.log('cards:' + Players[x].cards);
     for (var i = 0; i <7; i++){
       Players[x].cards.push(deck.pop());
+    }
+    if (Players[x].human == true){
+      showHand(Players[x]);
     }
   }
   //adds top card to pile
@@ -129,7 +166,6 @@ function fillDeck(){
 
 
 function add_card(card){
-  console.log('showing card');
   $('#hand').append('<div id =' + cardToString(card) +
     ' class= "card'+ card.color + '" ><div class = "cardOval"><h3 class= "cardText">' +
       card.value + '</h3></div></div>');
@@ -138,8 +174,36 @@ function add_card(card){
 
 //prints the cards that a player has
 function showHand(person){
+  $('#hand').empty();
   for (x in person.cards){
     add_card(person.cards[x]);
+  }
+}
+
+
+//shows the top card of the pile
+//takes card to add as a parameter
+function add_to_pile(card){
+  $('#topCard').empty();
+  $('#topCard').append('<div id = "top" class= "card'+ card.color + '" ><div class = "cardOval"><h3 class= "cardText">' +
+      card.value + '</h3></div></div>');
+  $('.card' + card.color).delay(200).fadeIn();
+}
+
+function turnOfPlayerHelper(player, valid){
+  var valid_id = [];
+  for (x in valid){
+    valid_id.push(cardToString(player.cards[valid[x]]));
+  }
+  alert('valid id:' + valid_id);
+  while (true){
+    for (x in valid_id){
+      $( "#" + valid_id[x] + "" ).click(function() {
+          alert('click occured');
+          console.log(valid[x]);
+          return valid[x];
+      });
+    }
   }
 }
 
@@ -147,9 +211,9 @@ function showHand(person){
 //if human, uses console
 function turnOfPlayer(num){
   //updates total number of turns
-  numTurns++;
   var player = Players[num];
   topCardInPile = getTopCard();
+  add_to_pile(topCardInPile);
   var valid = checkValid(player, topCardInPile);
   //if can't play cards, draws more until can
   while (valid.length ==0){
@@ -157,10 +221,37 @@ function turnOfPlayer(num){
     valid = checkValid(player, topCardInPile);
   }
   //handles human turn
-  if (player.human == true){
+  if (player.human){
+    var cardNotPlayed = true;
     showHand(player);
-    playCard(player, input);
-    console.log('you played ' + cardToString(pile[pile.length - 1]));
+    //need to javascript this
+
+    var valid_id = [];
+    for (x in valid){
+      valid_id.push(cardToString(player.cards[valid[x]]));
+    }
+
+
+      for (var i in valid_id){
+        //console.log('valid' + valid_id[i]);
+        $( "#" + valid_id[i] + "").hover(function(){
+          //$(this).effect( "shake" );
+          //$(this).css('width', '63px', 'height', '90px');
+        }
+        )
+        $( "#" + valid_id[i] + "" ).click(function() {
+            for (j in valid){
+              if (cardToString(player.cards[valid[j]]) == this.id){
+                console.log(valid[j]);
+                $( this ).hide(1000);
+                playCard(player, valid[j]);
+              }
+            }
+
+        });
+      }
+
+    //showHand(player);
   }
   //handles computer turn
   else{
@@ -171,18 +262,10 @@ function turnOfPlayer(num){
   }
   //if player is out of cards, game is over
   if (player.cards.length == 0){
-    gameOver = true;
-    console.log(player.name + ' is the winner!');
+    //gameOver = true;
+    //alert(player.name + ' is the winner!');
     return;
   }
-  //updates information
-  topCardInPile = getTopCard();
-  //updates color and value to play
-  colorToPlay = topCardInPile.color;
-  valToPlay = topCardInPile.value;
-  //returns card just played
-  return topCardInPile;
-  //SHOULD SHOW WHICH CARD played
 }
 
 //handles the special cards in deck
@@ -191,6 +274,9 @@ function turnOfPlayer(num){
 //updates colorToPlay, if necessary
 function handleCardAction(num){
   topCardInPile = getTopCard();
+  //updates color and value to play
+  colorToPlay = topCardInPile.color;
+  valToPlay = topCardInPile.value;
   //handles skip
   if (topCardInPile.value == 'skip'){
     numTurns++;
@@ -202,19 +288,19 @@ function handleCardAction(num){
   //handles wild cards
   nextPlayer = Players[numTurns % Players.length];
   if (topCardInPile.color == 'wild'){
-      if (topCardInPile.value == 'draw 4'){
+      if (topCardInPile.value == 'wild draw 4'){
         for (var i =0; i<4; i++){
           nextPlayer.cards.push(deck.pop());
         }
       }
       if(Players[(numTurns-1)%Players.length].human == false){
         colorToPlay = colors[Math.floor(Math.random() * 4)];
-        console.log('new color is: ' + colorToPlay);
+        alert('new color is: ' + colorToPlay);
       }
       else{
         var col = prompt('choose which color (0) blue 1) red 2) yellow 3) pink)');
         colorToPlay = colors[parseInt(col)];
-        console.log('new color is: ' + colorToPlay);
+        alert('new color is: ' + colorToPlay);
       }
   }
   //handles +2
@@ -231,43 +317,33 @@ function playGame(players){
   var gameOver = false;
   Players = players;
   topCardInPile = prepareGame();
-  console.log('top card is: ' + cardToString(topCardInPile));
+  add_to_pile(topCardInPile);
   numTurns = Math.floor(Math.random()*Players.length);
   var num = numTurns;
-  console.log(num);
-  while (gameOver == false){
-    var result = turnOfPlayer(num);
-    if (null != result){
-      topCard = result
-      console.log(cardToString(topCard));
-      num = handleCardAction(num);
-      if (pile.length > 10){
-        fillDeck();
-      }
-    }
-    else{
-      break;
-    }
-  }
+  turnOfPlayer(num);
 
 }
 
+//calls uno
+function callUno(type){
+  if (type=='human'){
+    calledUno = true;
+  }
+  else{
+    alert(type + ' called UNO!!');
+  }
+}
+
 var player1 = new player('CHUMP THE CHIPMUNK', false);
-var player2 = new player('Chumpina the first lady', false);
+var player2 = new player('Chumpina (wife #49)', false);
 var player3 = new player('little chumpy the baby', false);
 
-var card1 = new card('yellow', '+2');
-var card2 = new card('yellow', '+3');
-var card3 = new card('yellow', '+4');
-var card4 = new card('yellow', '+5');
-var card5 = new card('yellow', '+6');
+var playerx = new player('yelena', true);
 
+players = [player1, player2, player3, playerx];
 
-player1.cards = [card1, card2, card3];
 $( document ).ready(function() {
-  console.log('showing player1s hand')
-  showHand(player1)
-
+  playGame(players);
 });
 
 
