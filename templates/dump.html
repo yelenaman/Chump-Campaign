@@ -10,29 +10,11 @@
   </head>
   <body>
 
-    <div id="header">
-    <a href="../templates/home.html">
-      <img src="../pictures/Chipmunk.png" height="50px" width="50px"> </a>
-    </div>
+{% include 'templates/navbar.html' %}
 
-    <a href="../templates/home.html">
-      <div id="headerText"> CHUMP 2016 </div>
-    </a>
-
-    <div class="navigationbar">
-      <header>
-        <div class="nav">
-          <ul>
-            <li class="two"><a href="../templates/unohome.html">ChumpUNO</a></li>
-            <li class="three"><a href="../templates/locator.html">Locator</a></li>
-            <li class="four"><a href="../templates/dump.html">BreakUp</a></li>
-            <li class="five"><a href="../templates/videoSearch.html">Videos</a></li>
-          </ul>
-        </div>
-      </header>
-    </div>
 <h1> Break yo girl's heart, with Chump's help </h1>
-  <form id="inputFields" action="../templates/uno.instructions" method="POST">
+
+  <form id="inputFields" action="/breakuppreview" method="POST">
     <div id="inputQuestion">
       where she @ doe? <input type="text" name="emailInput"><br>
     </div>
@@ -42,13 +24,13 @@
     </div>
   </form>
 
-  <form id="whatever" action="../templates/dumppreview.html">
+  <form id="whatever" action="/breakuppreview">
     <button id="preview" type="submit" action="../templates/dumppreview.html">
       Preview
     </button>
   </form>
 
-  <form id="sendButton" action="../templates/dumpsent.html">
+  <form id="sendButton" action="/breakupsent">
     <button id="send" type="submit" action="../templates/dumpsent.html">
       Send
     </button>
@@ -56,7 +38,7 @@
 
   <footer id="trademark">
 
-    This site was approved and paid for by Ronald the Chipmunk <br>
+    This site was approved and paid for by Ronald Q. Chump <br>
     Developed by Chumps&trade;
 
   </footer>

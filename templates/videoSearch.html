@@ -5,40 +5,19 @@
     <link rel="stylesheet" type="text/css" href="../css/videoSearch.css">
     <link rel="icon" type="image/png" href="../pictures/Chipmunk.png"/>
     <link href='http://fonts.googleapis.com/css?family=Yantramanav:400,300' rel='stylesheet' type='text/css'>
+    <script src="../javascript/videoSearch.js"> </script>
   </head>
   <body>
 
-    <div id="header">
-    <a href="../templates/home.html">
-      <img src="../pictures/Chipmunk.png" height="50px" width="50px"> </a>
-      <script src="../javascript/videoSearch.js"> </script>
-    </div>
-
-    <a href="../templates/home.html">
-      <div id="headerText"> CHUMP 2016 </div>
-    </a>
-
-    <div class="navigationbar">
-      <header>
-        <div class="nav">
-          <ul>
-            <li class="two"><a href="../templates/unohome.html">ChumpUNO</a></li>
-            <li class="three"><a href="../templates/locator.html">Locator</a></li>
-            <li class="four"><a href="../templates/dump.html">BreakUp</a></li>
-            <li class="five"><a href="../templates/videoSearch.html">Videos</a></li>
-          </ul>
-        </div>
-      </header>
-    </div>
-
+{% include 'templates/navbar.html' %}
 
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/
-    videoseries?list=PLBsLXHvLw9EqF_nE5Rh04-r0-eV-6IIoj&index=0&amp;showinfo=1"
+    videoseries?list=PLBsLXHvLw9EqF_nE5Rh04-r0-eV-6IIoj&index={{ randomNumber }}&amp;showinfo=1"
     frameborder="0" allowfullscreen></iframe>
 
     <footer id="trademark">
 
-      This site was approved and paid for by Ronald the Chipmunk <br>
+      This site was approved and paid for by Ronald Q. Chump <br>
       Developed by Chumps&trade;
 
     </footer>

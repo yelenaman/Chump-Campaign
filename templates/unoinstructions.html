@@ -11,31 +11,23 @@
 
   <body>
 
-    <div id="header">
-    <a href="../templates/home.html">
-      <img src="../pictures/Chipmunk.png" height="50px" width="50px"> </a>
-    </div>
-
-    <a href="../templates/home.html">
-      <div id="headerText"> CHUMP 2016 </div>
-    </a>
-
-    <div class="navigationbar">
-      <header>
-        <div class="nav">
-          <ul>
-            <li class="two"><a href="../templates/unohome.html">ChumpUNO</a></li>
-            <li class="three"><a href="../templates/locator.html">Locator</a></li>
-            <li class="four"><a href="../templates/dump.html">BreakUp</a></li>
-            <li class="five"><a href="../templates/videoSearch.html">Videos</a></li>
-          </ul>
-        </div>
-      </header>
-    </div>
+{% include 'templates/navbar.html' %}
 
     <h1> How to Play </h1>
 
-    <form id="gameButton" action="../templates/unogame.html">
+    <p> The goal of the game is to use up all of your cards before anyone else.
+        To accomplish this, one plays a card of similar color or number on top
+        of the previously played card. There are special cards like those that
+        make you draw 2 and 4 additional cards, wild cards that change the current
+        color based on the player's choice, and reverse/skip cards, that skip the
+        next player's turns. </p>
+
+    <h3> Have fun! </h3>
+
+
+
+
+    <form id="gameButton" action="/unogame">
       <button id="playuno" type="submit" action="../templates/unogame.html">
         Play Uno
       </button>
@@ -45,7 +37,7 @@
 
     <footer id="trademark">
 
-      This site was approved and paid for by Ronald the Chipmunk <br>
+      This site was approved and paid for by Ronald Q. Chump <br>
       Developed by Chumps&trade;
 
     </footer>

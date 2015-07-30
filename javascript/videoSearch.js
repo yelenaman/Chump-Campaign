@@ -1,4 +1,1 @@
-function randomVideo(randomNumero){
-  randomNumero = ( Math.random() * 35 )
-  return randomNumero
-}
+var randomNumber = Math.random() * 35;

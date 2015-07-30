@@ -2,6 +2,7 @@ import webapp2
 import urllib2
 import jinja2
 import os
+import random
 
 class landingHandler(webapp2.RequestHandler):
     def get(self):
@@ -43,7 +44,7 @@ class dumpSentHandler(webapp2.RequestHandler):
         self.response.write(dumpSent.render())
 
 class dumpPreviewHandler(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         msgInput = self.request.get('msgInput')
         emailInput= self.request.get('emailInput')
         dict_words = {'msgInput': msgInput, 'emailInput': emailInput}
@@ -52,8 +53,14 @@ class dumpPreviewHandler(webapp2.RequestHandler):
 
 class videoHandler(webapp2.RequestHandler):
     def get(self):
+        randomNumber = random.randint(0,35)
         videoSearch = jinja_environment.get_template('templates/videoSearch.html')
         self.response.write(videoSearch.render())
+
+class aboutHandler(webapp2.RequestHandler):
+    def get(self):
+        aboutPage = jinja_environment.get_template('templates/about.html')
+        self.response.write(aboutPage.render())
 
 jinja_environment = jinja2.Environment(loader=
 jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -68,5 +75,6 @@ app = webapp2.WSGIApplication([
     ('/breakup', dumpHandler),
     ('/breakupsent', dumpSentHandler),
     ('/breakuppreview', dumpPreviewHandler),
-    ('/videos', videoHandler)
+    ('/videos', videoHandler),
+    ('/about', aboutHandler)
 ], debug=True)

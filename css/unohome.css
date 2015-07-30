@@ -5,6 +5,16 @@ body{
   margin-right: auto;
 }
 
+h1 {
+  color: white ;
+  font-family: 'Megrim', cursive;
+  font-size: 100px ;
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  padding: 70px ;
+}
+
 #trademark {
   color: white;
   font-family: 'Yantramanav', sans-serif;
