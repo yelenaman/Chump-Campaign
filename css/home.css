@@ -116,8 +116,8 @@ h2 {
     font-size: 1.4em;
   }
 
-.nav li {
+ .nav li {
     display: inline-block;
     margin-right: 100px;
-}
+  }
 }
