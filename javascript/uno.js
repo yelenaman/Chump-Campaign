@@ -100,7 +100,7 @@ function playCard(person, num){
     if (person.human){
       showHand(person);
     }
-  }, 500); 
+  }, 500);
   console.log('played' + cardToString(toPlay));
   numTurns++;
   //added
@@ -195,26 +195,12 @@ function add_to_pile(card){
   $('.card' + card.color).delay(200).fadeIn();
 }
 
-function turnOfPlayerHelper(player, valid){
-  var valid_id = [];
-  for (x in valid){
-    valid_id.push(cardToString(player.cards[valid[x]]));
-  }
-  alert('valid id:' + valid_id);
-  while (true){
-    for (x in valid_id){
-      $( "#" + valid_id[x] + "" ).click(function() {
-          alert('click occured');
-          console.log(valid[x]);
-          return valid[x];
-      });
-    }
-  }
-}
-
 //handles turn
 //if human, uses console
 function turnOfPlayer(num){
+  document.getElementById('play1').innerHTML= player1.cards.length;
+  document.getElementById('play2').innerHTML= player2.cards.length;
+  document.getElementById('play3').innerHTML= player3.cards.length;
   //updates total number of turns
   var player = Players[num];
   topCardInPile = getTopCard();
@@ -264,7 +250,7 @@ function turnOfPlayer(num){
 
     cardnum = parseInt(valid[Math.floor((Math.random() * valid.length))]);
     setTimeout(function(){
-        playCard(player, cardnum);}, 500);
+        playCard(player, cardnum);}, 800);
     console.log(player.name + ' played ' + cardToString(pile[pile.length - 1]));
   }
   //if player is out of cards, game is over
@@ -345,9 +331,10 @@ var player1 = new player('CHUMP THE CHIPMUNK', false);
 var player2 = new player('Chumpina (wife #49)', false);
 var player3 = new player('little chumpy the baby', false);
 
-var playerx = new player('yelena', true);
+var namePlayer = prompt('What is your name?')
+var playerx = new player(namePlayer, true);
 
-players = [player1, player2, player3, playerx];
+players = [player1, player2, playerx, player3];
 
 $( document ).ready(function() {
   playGame(players);

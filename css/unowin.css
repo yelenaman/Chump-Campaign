@@ -1,0 +1,123 @@
+body{
+  background-color: #CC0000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: white ;
+  font-family: 'Megrim', cursive;
+  font-size: 100px ;
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  padding: 70px ;
+}
+
+#trademark {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#header {
+  float :left;
+}
+
+#headerText {
+  margin-top: 5px;
+  font-size: 30px;
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  text-decoration: none;
+  float: left;
+  margin-right: 20px;
+  padding-left: 1px;
+}
+
+#gameButton {
+  text-align: center;
+  height: 40px;
+  margin: 40px;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  font-size: 23pt;
+  margin-top: 80px;
+}
+
+#playuno {
+  font-size: 23pt;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  text-align: center;
+}
+
+#instructionsButton {
+  text-align: center;
+  padding: 10px;
+  color: black;
+  font-family: 'Megrim', cursive;
+  font-size: 23pt;
+}
+
+#instructions {
+  font-size: 23pt;
+  color: black;
+  padding: 10px;
+  font-family: 'Megrim', cursive;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.nav li {
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+  display: inline-block;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+
+.nav a:hover {
+  background-color: #FF0000;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    width: 500px;
+    font-size: 80px;
+  }
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+
+  }
+
+  .nav li {
+    display: inline-block;
+    margin-right: 70px;
+}
+}
