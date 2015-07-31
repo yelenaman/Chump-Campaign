@@ -29,6 +29,7 @@ body{
 #player {
   margin-top: 60px;
   margin-bottom: 250px;
+  padding-top: 20px;
 }
 .nav ul {
   list-style: none;
