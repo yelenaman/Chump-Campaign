@@ -5,6 +5,13 @@ body{
   margin-right: auto;
 }
 
+h1 {
+  font-size: 30px;
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  text-align: center;
+
+}
 #trademark {
   color: white;
   font-family: 'Yantramanav', sans-serif;
