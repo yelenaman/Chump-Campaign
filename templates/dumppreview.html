@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yantramanav:400,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Amita:400,700' rel='stylesheet' type='text/css'>
-    <script src="dumppreview.js"> </script>
+    <!-- // <script src="dumppreview.js"> </script> -->
   </head>
 
   <body>
@@ -19,14 +19,17 @@
 
   <div id="breakuppics" style="background-image:url({{ imageurl }})">
     <div id="text">
-      <p> To: {{emailInput}} </p>
+      <p> To: {{ emailInput }} </p>
 
 
 
 
 
       <p> A message from your bae:
-        {{msgInput}} </p>
+      </p>
+      <p id = 'msg'>
+        {{ msgInput }}
+      </p>
     </div>
   </div>
 
