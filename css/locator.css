@@ -16,23 +16,23 @@ h3 {
 
 p {
   color: white;
-  font-family: 'Megrim', cursive;
+  font-family: 'Yantramanav', sans-serif;
   font-size: 20px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-#googleMap {
-
-}
+/*#googleMap {
+  margin-bottom: 500px;
+}*/
 
 #trademark {
   color: white;
   font-family: 'Yantramanav', sans-serif;
   font-size: 15px;
   text-align: center;
-  margin-top: -480px;
+  margin-top: -80px;
 }
 
 #header {
