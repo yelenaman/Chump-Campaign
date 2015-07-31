@@ -10,6 +10,7 @@ var Players = [];
 var wild = new card('wild', 'wild');
 var superwild = new card('wild', 'wild draw 4');
 var calledUno = false;
+//var clockwise = true;
 
 //prepares values and colors lists
 for (var i = 1; i < 10; i++)
@@ -102,7 +103,8 @@ function playCard(person, num){
     }
   }, 500);
   console.log('played' + cardToString(toPlay));
-  numTurns++;
+
+    numTurns++;
   //added
   var num1 = handleCardAction(num);
   if (pile.length > 10){
@@ -124,6 +126,13 @@ function playCard(person, num){
   if (person.cards.length == 0){
     gameOver = true;
     alert(person.name + ' is the winner!');
+    if (person.human){
+      window.open("/win","_self");
+    }
+    else{
+      window.open("/lose","_self");
+
+    }
     return;
   }
   turnOfPlayer(num1);
@@ -199,8 +208,8 @@ function add_to_pile(card){
 //if human, uses console
 function turnOfPlayer(num){
   document.getElementById('play1').innerHTML= player1.cards.length;
-  document.getElementById('play2').innerHTML= player2.cards.length;
-  document.getElementById('play3').innerHTML= player3.cards.length;
+  document.getElementById('play3').innerHTML= player2.cards.length;
+  document.getElementById('play2').innerHTML= player3.cards.length;
   //updates total number of turns
   var player = Players[num];
   topCardInPile = getTopCard();
@@ -250,7 +259,7 @@ function turnOfPlayer(num){
 
     cardnum = parseInt(valid[Math.floor((Math.random() * valid.length))]);
     setTimeout(function(){
-        playCard(player, cardnum);}, 800);
+        playCard(player, cardnum);}, 1000);
     console.log(player.name + ' played ' + cardToString(pile[pile.length - 1]));
   }
   //if player is out of cards, game is over
@@ -272,7 +281,7 @@ function handleCardAction(num){
   valToPlay = topCardInPile.value;
   //handles skip
   if (topCardInPile.value == 'skip'){
-    numTurns++;
+      numTurns++;
   }
   //handles reverse
   if (topCardInPile.value == 'reverse'){
@@ -334,7 +343,7 @@ var player3 = new player('little chumpy the baby', false);
 var namePlayer = prompt('What is your name?')
 var playerx = new player(namePlayer, true);
 
-players = [player1, player2, playerx, player3];
+players = [player2, playerx, player3, player1];
 
 $( document ).ready(function() {
   playGame(players);
