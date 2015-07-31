@@ -234,11 +234,21 @@ function turnOfPlayer(num){
 
       for (var i in valid_id){
         //console.log('valid' + valid_id[i]);
-        $( "#" + valid_id[i] + "").hover(function(){
-          //$(this).effect( "shake" );
-          //$(this).css('width', '63px', 'height', '90px');
+        $( "#" + valid_id[i] + "").mouseenter(function(){
+          $(this).css('background', 'gray');
         }
         )
+
+        $( "#" + valid_id[i] + "").mouseleave(function(){
+          for (j in valid){
+            if (cardToString(player.cards[valid[j]]) == this.id){
+              var col = player.cards[valid[j]].color;
+              $(this).css('background', col);
+            }
+          }
+        }
+        )
+
         $( "#" + valid_id[i] + "" ).click(function() {
             for (j in valid){
               if (cardToString(player.cards[valid[j]]) == this.id){
