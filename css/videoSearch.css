@@ -5,6 +5,14 @@ body{
   margin-right: auto;
 }
 
+h1 {
+  font-size: 30px;
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+  text-align: center;
+  padding: 30px;
+
+}
 #trademark {
   color: white;
   font-family: 'Yantramanav', sans-serif;
@@ -29,6 +37,7 @@ body{
 #player {
   margin-top: 60px;
   margin-bottom: 250px;
+  padding-top: 20px;
 }
 .nav ul {
   list-style: none;

@@ -43,10 +43,17 @@ class dumpSentHandler(webapp2.RequestHandler):
         dumpSent = jinja_environment.get_template('templates/dumpsent.html')
         self.response.write(dumpSent.render())
 
+
 class dumpPreviewHandler(webapp2.RequestHandler):
     def get(self):
+        dumpPreview = jinja_environment.get_template('templates/dumppreview.html')
+        #self.response.write(dumpPreview.render(self.request.POST))
+        self.response.write(dumpPreview.render())
+    def post(self):
         msgInput = self.request.get('msgInput')
         emailInput= self.request.get('emailInput')
+        # msgInput = 'poop'
+        # emailInput = 'pooooop'
         urllist = [
             "../pictures/breakuppic2.jpg",
             "../pictures/breakuppic3.jpg",
@@ -54,7 +61,9 @@ class dumpPreviewHandler(webapp2.RequestHandler):
             "../pictures/breakuppic5.jpg",
             "../pictures/breakuppic6.jpg"]
         dict_words = {'msgInput': msgInput, 'emailInput': emailInput, "imageurl": random.choice(urllist)}
+        #"imageurl" = random.choice(urllist)
         dumpPreview = jinja_environment.get_template('templates/dumppreview.html')
+        #self.response.write(dumpPreview.render(self.request.POST))
         self.response.write(dumpPreview.render(dict_words))
 
 class videoHandler(webapp2.RequestHandler):

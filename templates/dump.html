@@ -12,19 +12,20 @@
 
 {% include 'templates/navbar.html' %}
 
-<h1> Break their heart, with Chump's help </h1>
+<h1> Break their &hearts; <br> with Chump's help </h1>
 
+
+<h2>Do you need a helping hand to end your relationship with your significant other?
+<br> If so, use this BreakUp card maker brought to you by Ronald Q. Chump.</h2>
   <form id="inputFields" action="/breakuppreview" method="POST">
     <div id="inputQuestion">
-      whats their name? <input type="text" name="emailInput"><br>
+      What's their name? <input type="text" name="emailInput"><br>
     </div>
     <br>
     <div id="inputMessage">
-      How do you feel? <input type="text" name="msgInput"><br>
+      Your message: <input type="text" name="msgInput"><br>
     </div>
-  </form>
 
-  <form id="whatever" action="/breakuppreview">
     <button id="preview" type="submit" action="../templates/dumppreview.html">
       Preview
     </button>

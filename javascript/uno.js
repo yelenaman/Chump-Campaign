@@ -10,7 +10,7 @@ var Players = [];
 var wild = new card('wild', 'wild');
 var superwild = new card('wild', 'wild draw 4');
 var calledUno = false;
-var clockwise = true;
+//var clockwise = true;
 
 //prepares values and colors lists
 for (var i = 1; i < 10; i++)
@@ -103,12 +103,8 @@ function playCard(person, num){
     }
   }, 500);
   console.log('played' + cardToString(toPlay));
-  if (clockwise){
+
     numTurns++;
-  }
-  else{
-    numTurns--;
-  }
   //added
   var num1 = handleCardAction(num);
   if (pile.length > 10){
@@ -130,6 +126,13 @@ function playCard(person, num){
   if (person.cards.length == 0){
     gameOver = true;
     alert(person.name + ' is the winner!');
+    if (person.human){
+      window.open("/win","_self");
+    }
+    else{
+      window.open("/lose","_self");
+
+    }
     return;
   }
   turnOfPlayer(num1);
@@ -231,11 +234,21 @@ function turnOfPlayer(num){
 
       for (var i in valid_id){
         //console.log('valid' + valid_id[i]);
-        $( "#" + valid_id[i] + "").hover(function(){
-          //$(this).effect( "shake" );
-          //$(this).css('width', '63px', 'height', '90px');
+        $( "#" + valid_id[i] + "").mouseenter(function(){
+          $(this).css('background', 'gray');
         }
         )
+
+        $( "#" + valid_id[i] + "").mouseleave(function(){
+          for (j in valid){
+            if (cardToString(player.cards[valid[j]]) == this.id){
+              var col = player.cards[valid[j]].color;
+              $(this).css('background', col);
+            }
+          }
+        }
+        )
+
         $( "#" + valid_id[i] + "" ).click(function() {
             for (j in valid){
               if (cardToString(player.cards[valid[j]]) == this.id){
@@ -256,7 +269,7 @@ function turnOfPlayer(num){
 
     cardnum = parseInt(valid[Math.floor((Math.random() * valid.length))]);
     setTimeout(function(){
-        playCard(player, cardnum);}, 800);
+        playCard(player, cardnum);}, 1000);
     console.log(player.name + ' played ' + cardToString(pile[pile.length - 1]));
   }
   //if player is out of cards, game is over
@@ -278,17 +291,11 @@ function handleCardAction(num){
   valToPlay = topCardInPile.value;
   //handles skip
   if (topCardInPile.value == 'skip'){
-    if (clockwise){
       numTurns++;
-    }
-    else{
-      numTurns--;
-    }
   }
   //handles reverse
   if (topCardInPile.value == 'reverse'){
-    clockwise = !clockwise;
-    numTurns--;
+    Players.reverse();
   }
   //handles wild cards
   nextPlayer = Players[numTurns % Players.length];
@@ -346,7 +353,7 @@ var player3 = new player('little chumpy the baby', false);
 var namePlayer = prompt('What is your name?')
 var playerx = new player(namePlayer, true);
 
-players = [player1, player2, playerx, player3];
+players = [player2, playerx, player3, player1];
 
 $( document ).ready(function() {
   playGame(players);
